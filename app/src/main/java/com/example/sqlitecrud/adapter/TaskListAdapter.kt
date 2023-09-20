@@ -19,9 +19,9 @@ class TaskListAdapter(tasklist : List<TaskListModel>, internal var context : Con
         this.tasklist = tasklist
     }
         inner class TaskViewHolder(view : View) : RecyclerView.ViewHolder(view){
-            var name : TextView = view.findViewById(R.id.et_name)
-            var details : TextView = view.findViewById(R.id.et_details)
-            var btn_edit : TextView = view.findViewById(R.id.btn_edit)
+            var name : TextView = view.findViewById(R.id.txt_name)
+            var details : TextView = view.findViewById(R.id.txt_details)
+            var btn_edit : TextView = view.findViewById(R.id.btn_editar)
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskListAdapter.TaskViewHolder {
