@@ -72,9 +72,9 @@ class DatabaseHelper (context : Context) : SQLiteOpenHelper(context, DB_NAME, nu
         val cursor = db.rawQuery(selectQuery, null)
 
         cursor?.moveToFirst()
-        tasks.id = Integer.parseInt(cursor.getString(cursor.getColumnIndex(ID)))
-        tasks.name = cursor.getString(cursor.getColumnIndex(TABLE_NAME))
-        tasks.details = cursor.getString(cursor.getColumnIndex(TASK_DETAILS))
+        tasks.id = cursor.getColumnIndex(ID)
+        tasks.name = cursor.getColumnIndex(TABLE_NAME).toString()
+        tasks.details = cursor.getColumnIndex(TASK_DETAILS).toString()
         cursor.close()
 
         return tasks
